@@ -1,0 +1,8 @@
+<h1>Your destinations</h1>
+
+<ul>
+  <% @memories.each do |memory| %>
+    <li><%= memory.review %></li>
+    <li><%= memory.blog %></li>
+  <% end %>
+</ul>

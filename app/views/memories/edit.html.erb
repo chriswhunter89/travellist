@@ -1,0 +1,9 @@
+<h1>Edit your new memory</h1>
+
+<%= form_for(@memory) do |f| %>
+  <%= f.label :blog %>
+  <%= f.text_field :blog %>
+  <%= f.label :review %>
+  <%= f.text_field :review %>
+  <%= f.submit %>
+<% end %>
