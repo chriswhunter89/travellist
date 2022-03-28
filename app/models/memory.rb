@@ -1,5 +1,5 @@
 class Memory < ApplicationRecord
-  belongs_to :user, through: :tasks
+  belongs_to :user
 
   validates :title, presence: true
 end

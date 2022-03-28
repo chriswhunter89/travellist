@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_16_133255) do
+ActiveRecord::Schema.define(version: 2022_03_25_191715) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "destinations", force: :cascade do |t|
-    t.bigint "user_id", null: false
     t.string "name"
     t.string "address"
     t.integer "longitude"
@@ -25,6 +24,7 @@ ActiveRecord::Schema.define(version: 2022_03_16_133255) do
     t.integer "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_destinations_on_user_id"
   end
 
@@ -33,27 +33,27 @@ ActiveRecord::Schema.define(version: 2022_03_16_133255) do
     t.text "review"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "user_id"
-    t.index ["user_id"], name: "index_memories_on_user_id"
+    t.bigint "destination_id"
+    t.index ["destination_id"], name: "index_memories_on_destination_id"
   end
 
   create_table "profiles", force: :cascade do |t|
-    t.bigint "user_id", null: false
     t.text "bio"
     t.text "interests"
     t.string "location"
     t.date "birth_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id"
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
   create_table "tasks", force: :cascade do |t|
-    t.bigint "destination_id", null: false
     t.string "title"
     t.text "notes"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "destination_id"
     t.index ["destination_id"], name: "index_tasks_on_destination_id"
   end
 
@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(version: 2022_03_16_133255) do
   end
 
   add_foreign_key "destinations", "users"
-  add_foreign_key "memories", "users"
+  add_foreign_key "memories", "destinations"
   add_foreign_key "profiles", "users"
   add_foreign_key "tasks", "destinations"
 end
