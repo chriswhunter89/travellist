@@ -1,2 +1,24 @@
-<h1>Pages#home     Welcome to travellist</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div id= "home-page">
+  <div class="banner">
+    <div class="banner__left">
+      <h1 class="title">Your World</h1>
+      <h2 class="slogan">Travellist - Your first of many destinations</h2>
+      <button class="btn-sign-up">
+        <%= link_to "Sign up now", new_user_registration_path %>
+      </button>
+      <h3 class="or">Already have an account?</h3>
+      <button class="btn-sign-in">
+        <%= link_to "Log in", new_user_session_path %>
+      </button>
+    </div>
+    <div class="banner__right">
+      <%= image_tag("header-img.jpg") %>
+    </div>
+  </div>
+  <div class="features">
+    <p>THIS IS THE FEATURES SECTION</p>
+  </div>
+  <div class="reviews">
+    <p>THIS IS THE REVIEWS SECTION</p>
+  </div>
+</div>

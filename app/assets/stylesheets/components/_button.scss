@@ -1,0 +1,31 @@
+.btn-sign-up {
+  height: 50px;
+  width: 200px;
+  background-color: var(--color-primary-blue);
+  color: white;
+  border-radius: 8px;
+  border: none;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.btn-sign-in {
+  height: 50px;
+  width: 200px;
+  background-color: var(--color-primary-blue);
+  color: white;
+  border-radius: 8px;
+  border: none;
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}

@@ -1,1 +1,73 @@
 // Specific CSS for your home-page
+
+.banner {
+  max-width: 100vw;
+  height: 92vh;
+  margin: 1rem;
+  padding: 4.5rem;
+  background-color: var(--color-primary-yellow);
+  color: var(--color-primary-blue);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,.3);
+
+  display: flex;
+  justify-content: space-between;
+
+  &__left {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex: 0 0 45%;
+    margin-top: 12rem;
+    margin-bottom: 12rem;
+    margin-right: 4.5rem;
+
+    h1 {
+      font-size: 5rem;
+      font-weight: 800;
+      text-align: left;
+      border: 1px solid black;
+    }
+
+    h2 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      text-align: left;
+      border: 1px solid black;
+    }
+
+    h3 {
+      font-size: 2rem;
+      font-weight: 800;
+      text-align: left;
+      border: 1px solid black;
+    }
+
+    p {
+      font-weight: 800;
+      text-align: left;
+      border: 1px solid black;
+    }
+  }
+
+  &__right {
+    margin-top: 12rem;
+    margin-bottom: 12rem;
+    flex: 1;
+
+    img {
+      height: 100%;
+      width: 100%;
+      box-shadow: 0 15px 50px 20px rgba(51, 51, 79, 0.12);
+      border-radius: 12px;
+    }
+  }
+}
+
+.features {
+
+}
+
+.reviews {
+
+}

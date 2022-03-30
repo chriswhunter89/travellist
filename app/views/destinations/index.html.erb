@@ -1,7 +1,7 @@
 <h1>Your destinations</h1>
 
 <ul>
-  <% @destinations.each do |destination| %>
+  <% @user.destinations.each do |destination| %>
     <li><%= link_to destination.name, destination_path(destination) %></li>
   <% end %>
 </ul>
