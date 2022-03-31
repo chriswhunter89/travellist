@@ -15,38 +15,49 @@
 
   &__left {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
     flex: 0 0 45%;
     margin-top: 12rem;
-    margin-bottom: 12rem;
+    margin-bottom: 18rem;
     margin-right: 4.5rem;
+
+    .title-block {
+      height: 16rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 4rem;
+    }
+
+    .sign-in {
+      height: 12rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 6rem;
+    }
 
     h1 {
       font-size: 5rem;
       font-weight: 800;
       text-align: left;
-      border: 1px solid black;
     }
 
     h2 {
       font-size: 3.5rem;
       font-weight: 800;
       text-align: left;
-      border: 1px solid black;
     }
 
     h3 {
       font-size: 2rem;
       font-weight: 800;
       text-align: left;
-      border: 1px solid black;
     }
 
     p {
       font-weight: 800;
       text-align: left;
-      border: 1px solid black;
     }
   }
 
@@ -65,9 +76,34 @@
 }
 
 .features {
+  .intro-section {
+    display: flex;
+    align-items: center;
+    min-height: 600px;
+    padding: 32px 160px;
+    display: flex;
+    align-items: center;
 
+    h1 {
+      padding: 16px 32px;
+    }
+
+    p {
+      padding: 16px 32px;
+    }
+
+    img {
+      height: 320px;
+      width: auto;
+      box-shadow: 0 15px 50px 20px rgba(51, 51, 79, 0.12);
+      border-radius: 12px;
+    }
+
+    .right-section {
+      padding-left: 48px;
+    }
+  }
 }
 
 .reviews {
-
 }

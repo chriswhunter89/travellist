@@ -1,22 +1,52 @@
 <div id= "home-page">
   <div class="banner">
     <div class="banner__left">
-      <h1 class="title">Your World</h1>
-      <h2 class="slogan">Travellist - Your first of many destinations</h2>
+      <div class="title-block">
+        <h1 class="title">Your World</h1>
+        <h2 class="slogan">Travellist - Your first of many destinations</h2>
+      </div>
       <button class="btn-sign-up">
         <%= link_to "Sign up now", new_user_registration_path %>
       </button>
-      <h3 class="or">Already have an account?</h3>
-      <button class="btn-sign-in">
-        <%= link_to "Log in", new_user_session_path %>
-      </button>
+      <div class="sign-in">
+        <h3 class="or">Already have an account?</h3>
+        <button class="btn-sign-in">
+          <%= link_to "Log in", new_user_session_path %>
+        </button>
+      </div>
     </div>
     <div class="banner__right">
       <%= image_tag("header-img.jpg") %>
     </div>
   </div>
   <div class="features">
-    <p>THIS IS THE FEATURES SECTION</p>
+    <div class="intro-section">
+    <div class="col-6 col-lg-6 justify-content-center">
+      <h1>Choose your destinations </h1>
+      <p>It's your world! Choose all the destinations you want to go to. With Travellist you can keep track of both destinations you have been to and destinations you want to go to</p>
+    </div>
+    <div class="col-6 col-lg-6 justify-content-center">
+      <%= image_tag("world.jpg") %>
+    </div>
+  </div>
+  <div class="intro-section">
+    <div class="col-6 col-lg-6">
+      <%= image_tag("planning.jpg") %>
+    </div>
+    <div class="col-6 col-lg-6 right-section">
+      <h1>Plan what to do when you get there</h1>
+      <p>Planning is key. At Travellist, we provide a digital platform for you to plan and coordinate your next journey. It's your destination, what will you do there?</p>
+    </div>
+  </div>
+  <div class="intro-section">
+    <div class="col-6 col-lg-6">
+      <h1>A home for your memories</h1>
+      <p>Upload your holidays to travellist to create photo and video albums for each of your destinations.</p>
+    </div>
+    <div class="col-6 col-lg-6">
+      <%= image_tag("memories.jpg") %>
+    </div>
+  </div>
   </div>
   <div class="reviews">
     <p>THIS IS THE REVIEWS SECTION</p>

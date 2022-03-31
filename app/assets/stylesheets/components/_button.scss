@@ -1,4 +1,5 @@
 .btn-sign-up {
+  margin-bottom: 6rem;
   height: 50px;
   width: 200px;
   background-color: var(--color-primary-blue);
@@ -8,9 +9,22 @@
   a {
     text-decoration: none;
     color: white;
+    font-size: 1.6rem;
   }
+
   &:hover {
-    opacity: 1;
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+      transform: translateY(-1px);
+      box-shadow: 0 0.5rem 1rem rgba(0,0,0, 0.2);
   }
 }
 
@@ -24,8 +38,21 @@
   a {
     text-decoration: none;
     color: white;
+    font-size: 1.6rem;
   }
+
   &:hover {
-    opacity: 1;
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   }
 }
