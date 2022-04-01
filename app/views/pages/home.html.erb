@@ -20,35 +20,55 @@
     </div>
   </div>
   <div class="features">
-    <div class="intro-section">
-    <div class="col-6 col-lg-6 justify-content-center">
-      <h1>Choose your destinations </h1>
-      <p>It's your world! Choose all the destinations you want to go to. With Travellist you can keep track of both destinations you have been to and destinations you want to go to</p>
+    <div class="feature">
+      <div class="feature__content">
+        <h1>Choose your destinations </h1>
+        <p>It's your world! Choose all the destinations you want to go to. With Travellist you can keep track of both destinations you have been to and destinations you want to go to</p>
+      </div>
+      <div class="feature__image">
+        <%= image_tag("world.jpg") %>
+      </div>
     </div>
-    <div class="col-6 col-lg-6 justify-content-center">
-      <%= image_tag("world.jpg") %>
+    <div class="feature">
+      <div class="feature__image">
+        <%= image_tag("planning.jpg") %>
+      </div>
+      <div class="feature__content">
+        <h1>Plan what to do when you get there</h1>
+        <p>Planning is key. At Travellist, we provide a digital platform for you to plan and coordinate your next journey. It's your destination, what will you do there?</p>
+      </div>
     </div>
-  </div>
-  <div class="intro-section">
-    <div class="col-6 col-lg-6">
-      <%= image_tag("planning.jpg") %>
+    <div class="feature">
+      <div class="feature__content">
+        <h1>A home for your memories</h1>
+        <p>Upload your holidays to travellist to create photo and video albums for each of your destinations.</p>
+      </div>
+      <div class="feature__image">
+        <%= image_tag("memories.jpg") %>
+      </div>
     </div>
-    <div class="col-6 col-lg-6 right-section">
-      <h1>Plan what to do when you get there</h1>
-      <p>Planning is key. At Travellist, we provide a digital platform for you to plan and coordinate your next journey. It's your destination, what will you do there?</p>
-    </div>
-  </div>
-  <div class="intro-section">
-    <div class="col-6 col-lg-6">
-      <h1>A home for your memories</h1>
-      <p>Upload your holidays to travellist to create photo and video albums for each of your destinations.</p>
-    </div>
-    <div class="col-6 col-lg-6">
-      <%= image_tag("memories.jpg") %>
-    </div>
-  </div>
   </div>
   <div class="reviews">
-    <p>THIS IS THE REVIEWS SECTION</p>
+    <div class="review">
+    <div class="image-cropper">
+      <%= image_tag("review1.jpg") %>
+    </div>
+      <h4 class="name">Johnny Hunter</h4>
+      <p class="description">I love using travellist. It just makes my holiday planning so much easier!</p>
+      </div>
+    <div class="review">
+    <div class="image-cropper">
+      <%= image_tag("review2.jpg") %>
+    </div>
+      <h4 class="name">Amy Woods</h4>
+      <p class="description">I'm not the most organised person so it's great to have somewhere to keep all my holiday info.</p>
+      </div>
+    <div class="review">
+    <div class="image-cropper">
+      <%= image_tag("test.jpg") %>
+    </div>
+      <h4 class="name">Danny Heaney</h4>
+      <p class="description">As an avid travel I would definitely recommend travellist! :D</p>
+      </div>
   </div>
 </div>
