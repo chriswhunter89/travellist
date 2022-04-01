@@ -1,0 +1,84 @@
+.sign-up-page {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sign-up {
+  background-color: $color-primary-yellow;
+  box-shadow: #00000012 0px 1px 3px, #00000024 0px 1px 2px;
+  border-radius: 12px;
+  padding: 40px;
+  display: flex;
+
+  h1 {
+    color: $color-primary-blue;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 36px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-family: Inter, sans-serif;
+    font-weight: 300;
+    margin-bottom: 8px;
+  }
+
+  .sign-up-form {
+    padding: 0px;
+    margin: 0px;
+    width: 50%;
+  }
+
+  label {
+    font-weight: 300;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: $color-primary-blue;
+  }
+
+  input {
+    border-radius: 8px;
+    outline-width: 0px !important;
+    background-color: #f7f7f8;
+
+    &:focus {
+      border: 3px solid $color-primary-blue;
+      outline-width: 0px !important;
+      box-shadow: none;
+    }
+  }
+
+
+  .login-btn {
+    background-color: #f7f7f8;
+    color: #6C757D;
+    width: 100%;
+    margin: 8px auto;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: blue;
+      color: white;
+    }
+  }
+
+  .sign-up-image {
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+}
