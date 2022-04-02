@@ -1,9 +1,9 @@
-#sign-up-page {
-    display: grid;
-    grid-template-rows: 90vh auto min-content;
-    grid-template-columns: [full-start] 10% [center-start]  1fr [center-end] 10% [full-end]; // 1140px / 8 columns = 140px
+#login-page {
+  display: grid;
+  grid-template-rows: 90vh auto min-content;
+  grid-template-columns: [full-start] 10% [center-start]  1fr [center-end] 10% [full-end]; // 1140px / 8 columns = 140px
 
-  .sign-up-form {
+  .login-form {
     margin-top: 12rem;
     grid-column: center-start / center-end;
     background-color: $color-primary-yellow;
@@ -11,16 +11,32 @@
     border-radius: 12px;
     padding: 40px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
     &__left {
+      display: flex;
+      align-items: center;
       width: 50%;
+      justify-content: center;
+      img {
+        height: 30rem;
+        width: auto;
+        box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+      }
+    }
+
+    &__right {
+      width: 30%;
+      justify-content: center;
+      margin-right: 10rem;
+      position: relative;
+      bottom: 1.5rem;
 
       h1 {
         position: relative;
-        left: 50%;
-        bottom: 5rem;
+        right: 90%;
+        bottom: 10rem;
         color: $color-primary-blue;
         text-decoration: underline;
         font-family: 'Bebas Neue', cursive;
@@ -73,18 +89,6 @@
           background-color: blue;
           color: white;
         }
-      }
-    }
-
-    &__right {
-      display: flex;
-      align-items: center;
-      width: 50%;
-      justify-content: center;
-      img {
-        height: 30rem;
-        width: auto;
-        box-shadow: 0 0 20px rgba(0, 0, 0, .3);
       }
     }
   }
