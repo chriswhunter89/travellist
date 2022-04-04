@@ -56,3 +56,29 @@
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
   }
 }
+
+.btn-primary {
+  margin: 2rem;
+  height: 30px;
+  width: 200px;
+  background-color: $color-primary-blue;
+  color: white;
+  border-radius: 8px;
+  border: none;
+
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+}
