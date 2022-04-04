@@ -1,0 +1,75 @@
+#user-show-page {
+  display: grid;
+  grid-template-columns: [full-start] 4rem [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 4rem [full-end]; // 1140px / 8 columns = 140px
+  width: 100vw;
+  gap: 3rem;
+  padding: 4rem 0;
+
+  .user-show-page-top {
+    grid-column: center-start / center-end;
+    background-color: lightcoral;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .user-show-page-left {
+    grid-column: center-start / col-start 3;
+    background-color: lightcoral;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+
+    h3 {
+      padding-bottom: 2rem;
+    }
+
+    ul {
+      border: 2px green solid;
+      border-radius: 2rem;
+      background-color: #FFFDD0;
+      padding: 2rem;
+      width: 80%;
+      height: 100%;
+      list-style: none;
+
+      li {
+        height: 3rem;
+        border: 1px lightgreen solid;
+        border-radius: 1rem;
+        padding: auto 0;
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+        margin: 0.5rem 0;
+
+        a:link {
+          text-decoration: none;
+          color: black;
+          font-size: 3;
+        }
+      }
+
+    }
+
+  }
+
+  .user-show-page-right {
+    grid-column: col-start 3 / center-end;
+    background-color: lightcoral;
+    height: 50vh;
+    padding: 3rem;
+  }
+
+  .user-show-page-bottom {
+    grid-column: col-start 3 / center-end;
+    background-color: lightcoral;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+  }
+
+}
