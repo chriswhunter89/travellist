@@ -1,2 +1,25 @@
-<h1>Welcome to your dashboard!</h1>
-<p><%= link_to "View your destinations", destinations_path, class: "btn btn-primary blue-btn"%></p>
+<div id="user-show-page">
+  <div class="user-show-page-top">
+    <h1>Welcome to your dashboard, <%= current_user.first_name %>!</h1>
+    <h3>Manage your destinations, tasks and memories all from one location!</h3>
+  </div>
+  <div class="user-show-page-left">
+  <h3>Your destinations</h3>
+    <ul>
+      <% @user.destinations.each do |destination| %>
+        <li><%= link_to destination.name, destination_path(destination) %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="user-show-page-right">
+    <h1>MAPBOX PLACEHOLDER</h1>
+  </div>
+  <div class="user-show-page-bottom">
+    <button class="btn-primary">
+      <%= link_to "View your destinations", destinations_path %>
+    </button>
+    <button class="btn-primary">
+      <%= link_to "Add a destination", new_destination_path %>
+    </button>
+  </div>
+</div>
