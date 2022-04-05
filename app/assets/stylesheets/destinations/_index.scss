@@ -1,0 +1,21 @@
+#destination-index-page {
+  display: grid;
+  grid-template-columns: [full-start] 4rem [center-start] repeat(3, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 4rem [full-end]; // 1140px / 8 columns = 140px
+  width: 100vw;
+  gap: 3rem;
+  padding: 4rem 0;
+
+  .destination-index-right {
+    grid-column: center-start 3 / center-end;
+    height: 50vh;
+    width: 80%;
+    margin: 0 auto;
+    border: 5px $color-primary-yellow solid;
+    border-radius: 3rem;
+
+    .map {
+      border-radius: 2.4rem;
+      overflow: auto;
+    }
+  }
+}

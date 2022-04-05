@@ -6,6 +6,9 @@
 // External libraries
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome";
+@import "mapbox-gl/dist/mapbox-gl";
+@import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder";
+
 
 // Your CSS partials
 @import "components/index";
@@ -14,6 +17,9 @@
 @import "users/signup";
 @import "users/login";
 @import "users/show";
+@import "components/map";
+@import "destinations/index";
+@import "destinations/new";
 
 //Universal properties
 
