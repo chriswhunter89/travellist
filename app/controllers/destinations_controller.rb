@@ -2,6 +2,14 @@ class DestinationsController < ApplicationController
   def index
     @destinations = Destination.all
     @user = current_user
+
+    @markers = @destinations.geocoded.map do |destination|
+      {
+        lat: destination.latitude,
+        lng: destination.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { destination: destination })
+      }
+    end
   end
 
   def show

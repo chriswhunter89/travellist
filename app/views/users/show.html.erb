@@ -11,14 +11,16 @@
       <% end %>
     </ul>
   </div>
-  <div class="user-show-page-right">
-    <h1>MAPBOX PLACEHOLDER</h1>
-  </div>
+    <div class="user-show-page-right">
+      <div class="map" style="width: 100%; height: 100%;"
+        data-controller="mapbox"
+        data-mapbox-markers-value="<%= @markers.to_json %>"
+        data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+
   <div class="user-show-page-bottom">
-    <button class="btn-primary">
-      <%= link_to "View your destinations", destinations_path %>
-    </button>
-    <button class="btn-primary">
+    <button class="btn-navigate">
       <%= link_to "Add a destination", new_destination_path %>
     </button>
   </div>

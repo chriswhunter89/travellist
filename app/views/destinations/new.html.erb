@@ -1,14 +1,27 @@
 <h1>Create your new destination</h1>
-
+<!--
 <%= form_for @destination, url: destinations_path, html: { method: :post } do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :address %>
-  <%= f.text_field :address %>
+  <%= f.text_field :address,
+              text_field_html: { data: { geocoder_target: "address" } },
+              wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: ENV['MAPBOX_API_KEY'] } } %>
   <%= f.check_box :visited %>
   <%= f.label :rating %>
   <%= f.number_field :rating %>
   <%= f.submit %>
 <% end %>
+-->
+  <%= simple_form_for(@destination) do |f| %>
+  <%= f.input :name %>
+
+  <%= f.input :address,
+              input_html: { data: { geocoder_target: "address" }, class: "d-none"  },
+              wrapper_html: { data: { controller: "geocoder", geocoder_api_key_value: ENV['MAPBOX_API_KEY'] } } %>
+  <%= f.check_box :visited, as: :boolean, checked_value: true, unchecked_value: false %> <span class="labelText">I have been to this destination before</span>
+  <p></p>
+  <%= f.button :submit, class: "btn btn-primary" %>
+  <% end %>
 
 <p><%= link_to "Return to destinations", destinations_path, class: "btn btn-primary blue-btn"%></p>

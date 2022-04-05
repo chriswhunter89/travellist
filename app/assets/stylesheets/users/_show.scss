@@ -7,7 +7,6 @@
 
   .user-show-page-top {
     grid-column: center-start / center-end;
-    background-color: lightcoral;
     height: 15vh;
     display: flex;
     flex-direction: column;
@@ -16,7 +15,6 @@
 
   .user-show-page-left {
     grid-column: center-start / col-start 3;
-    background-color: lightcoral;
     height: 50vh;
     display: flex;
     flex-direction: column;
@@ -28,9 +26,9 @@
     }
 
     ul {
-      border: 2px green solid;
+      background-color: #fefbe9;
+      border: 2px $color-primary-yellow solid;
       border-radius: 2rem;
-      background-color: #FFFDD0;
       padding: 2rem;
       width: 80%;
       height: 100%;
@@ -38,7 +36,8 @@
 
       li {
         height: 3rem;
-        border: 1px lightgreen solid;
+        border: 1px $color-primary-yellow solid;
+        background-color: #87cefa;
         border-radius: 1rem;
         padding: auto 0;
         display: flex;
@@ -51,25 +50,31 @@
           color: black;
           font-size: 3;
         }
+
+        a:visited {
+          color: black;
+        }
       }
-
     }
-
   }
 
   .user-show-page-right {
     grid-column: col-start 3 / center-end;
-    background-color: lightcoral;
     height: 50vh;
-    padding: 3rem;
+    width: 80%;
+    margin: 0 auto;
+    border: 5px $color-primary-yellow solid;
+    border-radius: 3rem;
+    .map {
+      border-radius: 2.4rem;
+      overflow: auto;
+    }
   }
 
   .user-show-page-bottom {
     grid-column: col-start 3 / center-end;
-    background-color: lightcoral;
     height: 15vh;
     display: flex;
     justify-content: center;
   }
-
 }
