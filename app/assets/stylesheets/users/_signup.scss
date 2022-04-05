@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 #sign-up-page {
     display: grid;
     grid-template-rows: 90vh auto min-content;
@@ -10,81 +13,114 @@
     box-shadow: #00000012 0px 1px 3px, #00000024 0px 1px 2px;
     border-radius: 12px;
     padding: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    &__left {
-      width: 50%;
-
-      h1 {
-        position: relative;
-        left: 50%;
-        bottom: 5rem;
-        color: $color-primary-blue;
-        text-decoration: underline;
-        font-family: 'Bebas Neue', cursive;
-        font-size: 36px;
-        text-align: center;
-      }
-
-      h2 {
-        position: relative;
-        left: 40%;
-        color: $color-primary-blue;
-        font-size: 18px;
-        font-family: Inter, sans-serif;
-        font-weight: 300;
-        margin-bottom: 8px;
-      }
-
-      label {
-        font-weight: 300;
-        font-size: 14px;
-        margin-bottom: 8px;
-        color: $color-primary-blue;
-      }
-
-      input {
-        border-radius: 8px;
-        outline-width: 0px !important;
-        background-color: #f7f7f8;
-
-        &:focus {
-          border: 3px solid $color-primary-blue;
-          outline-width: 0px !important;
-          box-shadow: none;
-        }
-      }
-
-      .login-btn {
-        background-color: #f7f7f8;
-        color: #6C757D;
-        width: 100px;
-        margin: 8px auto;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 8px;
-        text-decoration: none;
-
-        &:hover {
-          background-color: blue;
-          color: white;
-        }
-      }
-    }
-
-    &__right {
+    .form-content {
       display: flex;
-      align-items: center;
-      width: 50%;
       justify-content: center;
-      img {
-        height: 30rem;
-        width: auto;
-        box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+      align-items: center;
+      height: 100%;
+
+      .form-left {
+        width: 50%;
+
+        h1 {
+          position: relative;
+          left: 50%;
+          bottom: 5rem;
+          color: $color-primary-blue;
+          text-decoration: underline;
+          font-family: 'Bebas Neue', cursive;
+          font-size: 36px;
+          text-align: center;
+        }
+
+        h2 {
+          position: relative;
+          left: 40%;
+          color: $color-primary-blue;
+          font-size: 24px;
+          font-family: Inter, sans-serif;
+          font-weight: 300;
+          margin-bottom: 8px;
+        }
+
+        label {
+          font-weight: 300;
+          font-size: 14px;
+          margin-bottom: 8px;
+          color: $color-primary-blue;
+        }
+
+        input {
+          border-radius: 8px;
+          outline-width: 0px !important;
+          background-color: #f7f7f8;
+          width: 80%;
+
+          &:focus {
+            border: 3px solid $color-primary-blue;
+            outline-width: 0px !important;
+            box-shadow: none;
+          }
+        }
+
+        .form-actions {
+          .form-sign-up-btn {
+            margin-top: 3rem;
+            height: 40px;
+            width: 200px;
+            background-color: $color-primary-blue;
+            color: white;
+            border-radius: 8px;
+            border: none;
+
+            a {
+              text-decoration: none;
+              color: white;
+              font-size: 1.6rem;
+            }
+
+            &:hover {
+              transform: translateY(-3px);
+              box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+              &::after {
+                transform: scaleX(1.4) scaleY(1.6);
+                opacity: 0;
+              }
+            }
+          }
+        }
+
+        .login-btn {
+          background-color: #f7f7f8;
+          color: #6C757D;
+          width: 100px;
+          margin: 8px auto;
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 8px;
+          text-decoration: none;
+
+          &:hover {
+            background-color: blue;
+            color: white;
+          }
+        }
+      }
+
+      .form-right {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        justify-content: center;
+        img {
+          height: 35rem;
+          width: auto;
+          box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+        }
       }
     }
   }
