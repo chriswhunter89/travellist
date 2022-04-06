@@ -3,4 +3,5 @@ class Task < ApplicationRecord
   has_many :memories
 
   validates :title, presence: true
+  validates :notes, presence: true
 end

@@ -14,11 +14,11 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :destinations
-  resources :tasks
-  resources :memories
+  resources :destinations do
+    resources :tasks, only: [ :new, :create, :destroy ]
+    resources :memories, only: [ :new, :create, :destroy ]
+  end
   resources :profile
-
 end
 
 #   resources :users do

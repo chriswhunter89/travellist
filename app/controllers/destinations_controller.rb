@@ -14,6 +14,9 @@ class DestinationsController < ApplicationController
 
   def show
     @destination = Destination.find(params[:id])
+    @tasks = @destination.tasks
+
+    @markers = [lat: @destination.latitude, lng: @destination.longitude]
   end
 
   def new
@@ -24,7 +27,7 @@ class DestinationsController < ApplicationController
     @destination = Destination.new(destination_params)
     @destination.user = current_user
     @destination.save
-    redirect_to destinations_path(@destination)
+    redirect_to authenticated_root_path
   end
 
   def edit
@@ -34,13 +37,13 @@ class DestinationsController < ApplicationController
   def update
     @destination = Destination.find(params[:id])
     @destination.update(destination_params)
-    redirect_to user_destinations_path(@destination)
+    redirect_to authenticated_root_path
   end
 
   def destroy
     @destination = Destination.find(params[:id])
     @destination.destroy
-    redirect_to user_destinations_path(@destination)
+    redirect_to authenticated_root_path
   end
 
   private

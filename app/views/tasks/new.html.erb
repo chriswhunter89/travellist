@@ -1,11 +1,17 @@
-<h1>Create your new task</h1>
+<div id="new-task-page">
+  <div class="new-task-form">
+    <div class="form-content">
+      <h1>Create your new task</h1>
 
-<%= form_for @task, url: tasks_path, html: { method: :post } do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :notes %>
-  <%= f.text_field :notes %>
-  <%= f.submit %>
-<% end %>
+      <%= form_for ([@destination,@task]), url: destination_tasks_path, html: { method: :post } do |f| %>
+        <%= f.label :title %>
+        <%= f.text_field :title %>
+        <%= f.label :notes %>
+        <%= f.text_field :notes %>
+        <%= f.submit %>
+      <% end %>
 
-<p><%= link_to "Return to tasks", tasks_path, class: "btn btn-primary blue-btn"%></p>
+      <%= link_to "Return to destination", destination_path(@destination), class: "btn btn-primary blue-btn"%>
+    </div>
+  </div>
+</div>
