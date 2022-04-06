@@ -1,6 +1,9 @@
 .navbar-lewagon {
+  align-items: center;
   justify-content: space-between;
-  background: white;
+  background: $color-primary-yellow;
+  height: 8vh;
+  padding: 0 4rem;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +12,40 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+
+#navbarSupportedContent {
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.heading {
+  align-self: center;
+      font-size: 3rem;
+      color: white;
+      font-weight: 700;
+
+  a {
+    color: white;
+
+    &:hover,
+    &:focus {
+      text-decoration: none !important;
+      outline: none !important;
+    }
+  }
+}
+
+.nav-item {
+  font-size: 1.5rem;
 }
