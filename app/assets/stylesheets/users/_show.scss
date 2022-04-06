@@ -1,6 +1,6 @@
 #user-show-page {
   display: grid;
-  grid-template-columns: [full-start] 4rem [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 4rem [full-end]; // 1140px / 8 columns = 140px
+  grid-template-columns: [full-start] 6rem [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] 6rem [full-end]; // 1140px / 8 columns = 140px
   width: 100vw;
   gap: 3rem;
   padding: 4rem 0;
@@ -26,7 +26,7 @@
     }
 
     ul {
-      background-color: #fefbe9;
+      background-color: #f2e9ad;
       border: 2px $color-primary-yellow solid;
       border-radius: 2rem;
       padding: 2rem;
@@ -61,7 +61,7 @@
   .user-show-page-right {
     grid-column: col-start 3 / center-end;
     height: 50vh;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     border: 5px $color-primary-yellow solid;
     border-radius: 3rem;
