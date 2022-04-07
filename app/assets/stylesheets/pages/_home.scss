@@ -2,15 +2,18 @@
 
 #home-page {
   display: grid;
-  grid-template-rows: 90vh auto min-content;
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; // 1140px / 8 columns = 140px
+  grid-template-rows: auto min-content;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; // 1140px / 8 columns = 140px
 }
 
 .banner {
   grid-column: full-start / full-end;
+  grid-template-columns: minmax(min-content, max-content);
+  grid-template-rows: minmax(min-content, max-content);
+  height: 90vh;
   background-color: $color-primary-yellow;
   color: $color-primary-blue;
-  margin: 1rem;
+  margin: 1rem !important;
   padding: 4.5rem;
   border-radius: 2rem;
   box-shadow: 0 0 20px rgba(0,0,0,.3);
@@ -21,7 +24,8 @@
   &__left {
     display: flex;
     flex-direction: column;
-    flex: 0 0 45%;
+    justify-content: center;
+    width: 40%;
     margin-top: 12rem;
     margin-bottom: 18rem;
     margin-right: 4.5rem;
@@ -41,38 +45,14 @@
       justify-content: space-between;
       margin-bottom: 6rem;
     }
-
-    h1 {
-      font-size: 5rem;
-      font-weight: 800;
-      text-align: left;
-    }
-
-    h2 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      text-align: left;
-    }
-
-    h3 {
-      font-size: 2rem;
-      font-weight: 800;
-      text-align: left;
-    }
-
-    p {
-      font-weight: 800;
-      text-align: left;
-    }
   }
 
   &__right {
-    margin-top: 12rem;
-    margin-bottom: 12rem;
-    flex: 1;
+    width: 60%;
+    margin: auto 0;
 
     img {
-      height: 100%;
+      max-height: 60%;
       max-width: 100%;
       box-shadow: 0 15px 50px 20px rgba(51, 51, 79, 0.12);
       border-radius: 12px;
