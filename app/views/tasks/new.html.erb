@@ -3,12 +3,10 @@
     <div class="form-content">
       <h1>Create your new task</h1>
 
-      <%= form_for ([@destination,@task]), url: tasks_path, html: { method: :post } do |f| %>
-        <%= f.label :title %>
-        <%= f.text_field :title %>
-        <%= f.label :notes %>
-        <%= f.text_field :notes %>
-        <%= f.submit %>
+      <%= simple_form_for [@post, Task.new] do |f| %>
+      <%= f.input :title %>
+      <%= f.input :notes %>
+      <%= f.button :submit, class: "btn btn-primary" %>
       <% end %>
 
       <%= link_to "Return to homepage", authenticated_root_path, class: "btn btn-primary blue-btn"%>

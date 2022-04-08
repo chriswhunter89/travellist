@@ -2,8 +2,10 @@
 
 #home-page {
   display: grid;
+  width: 100vw;
   grid-template-rows: auto min-content;
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; // 1140px / 8 columns = 140px
+  grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] minmax(2rem, 1fr) [full-end]; // 1140px / 8 columns = 140px
+  overflow: hidden;
 }
 
 .banner {
@@ -17,6 +19,7 @@
   padding: 4.5rem;
   border-radius: 2rem;
   box-shadow: 0 0 20px rgba(0,0,0,.3);
+  align-items: center;
 
   display: flex;
   justify-content: space-between;
@@ -24,7 +27,7 @@
   &__left {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     width: 40%;
     margin-top: 12rem;
     margin-bottom: 18rem;
@@ -101,24 +104,36 @@
   }
 }
 
-.reviews {
+.review-section {
   grid-column: center-start / center-end;
   margin: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  display: grid;
-  grid-template-columns: repeat(3, 30rem);
-  grid-gap: 6rem;
-  justify-content: center;
-
-  h1 {
-    grid-column: 1 / -1;
-    text-align: center;
-    margin-bottom: 7rem;
+    h1 {
+      grid-column: 1 / -1;
+      text-align: center;
+      margin-bottom: 7rem;
+      max-width: 80%;
+      text-align: center;
+      margin-bottom: 10rem;
     }
+}
+
+.reviews {
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+
 
   .review {
     height: 25rem;
+    width: 25rem;
     display: flex;
+    margin: 0 5rem;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;

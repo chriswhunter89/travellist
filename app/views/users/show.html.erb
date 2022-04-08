@@ -6,9 +6,13 @@
   <div class="user-show-page-left">
   <h3>Your destinations</h3>
     <ul>
+    <% if @user.destinations.size == 0  %>
+      <li>It looks like you have no destinations yet! Click on add destinations to begin your next adventure!</li>
+    <% else %>
       <% @user.destinations.each do |destination| %>
         <li><%= link_to destination.name, destination_path(destination) %></li>
       <% end %>
+    <% end %>
     </ul>
   </div>
     <div class="user-show-page-right">
