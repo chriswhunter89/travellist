@@ -1,56 +1,46 @@
 #new-task-page {
-      display: grid;
-      grid-template-rows: 90vh auto min-content;
-      grid-template-columns: [full-start] 30% [center-start] 1fr [center-end] 30% [full-end]; // 1140px / 8 columns = 140px
+  display: grid;
+  grid-template-rows: 90vh auto min-content;
+  grid-template-columns: [full-start] 30% [center-start] 1fr [center-end] 30% [full-end];
+  align-items: center;
 
   .new-task-form {
-    height: 60%;
-    margin-top: 12rem;
+    height: 60vh;
     grid-column: center-start / center-end;
     background-color: $color-primary-yellow;
-    box-shadow: #00000012 0px 1px 3px,
-    #00000024 0px 1px 2px;
+    box-shadow: #00000012 0px 1px 3px, #00000024 0px 1px 2px;
     border-radius: 12px;
-    padding: 40px;
+    padding: 5rem !important;
 
     .form-content {
+      height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
-      height: 100%;
-
-      .new_task {
-        position: relative;
-        width: 65%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        bottom: 2rem;
-
-        #task_notes {
-          margin-bottom: 2rem;
-          height: 5rem;
-        }
-
-        label {
-          position: relative;
-          right: 35%;
-          top: 1rem;
-        }
-      }
-    }
 
       h1 {
+        bottom: 5rem;
         color: $color-primary-blue;
         text-decoration: underline;
-        font-family: 'Bebas Neue', 'cursive';
+        font-family: 'Bebas Neue', cursive;
         font-size: 36px;
-        text-align: center;
+      }
+
+      form {
+        height: 70%;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      textarea {
+        height: 10rem;
       }
 
       h2 {
+        position: relative;
+        left: 40%;
         color: $color-primary-blue;
         font-size: 24px;
         font-family: Inter, sans-serif;
@@ -59,17 +49,28 @@
       }
 
       label {
+        display: flex;
         font-weight: 300;
         font-size: 14px;
         margin-bottom: 8px;
         color: $color-primary-blue;
+        align-items: center;
       }
 
-      input {
-        border-radius: 8px;
+      .labelText {
+        font-weight: 300;
+        font-size: 14px;
+        color: $color-primary-blue;
+        margin-left: 1rem;
+      }
+
+      input:not([type=checkbox]) {
+        width: 100%;
+        height: 3rem;
+        border-radius: 2px;
         outline-width: 0px !important;
         background-color: #f7f7f8;
-        width: 80%;
+        font-size: 1.5rem;
 
         &:focus {
           border: 3px solid $color-primary-blue;
@@ -78,33 +79,32 @@
         }
       }
 
-      .form-actions {
-        .form-sign-up-btn {
-          margin-top: 3rem;
-          height: 40px;
-          width: 200px;
-          background-color: $color-primary-blue;
+      input[type=submit] {
+        margin: 3rem auto;
+        height: 40px;
+        width: 200px;
+        background-color: $color-primary-blue;
+        color: white;
+        border-radius: 8px;
+        border: none;
+
+        a {
+          text-decoration: none;
           color: white;
-          border-radius: 8px;
-          border: none;
+          font-size: 1.6rem;
+        }
 
-          a {
-            text-decoration: none;
-            color: white;
-            font-size: 1.6rem;
-          }
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 
-          &:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-
-            &::after {
-              transform: scaleX(1.4) scaleY(1.6);
-              opacity: 0;
-            }
+          &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
           }
         }
       }
+
 
       .login-btn {
         background-color: #f7f7f8;
@@ -123,5 +123,6 @@
           color: white;
         }
       }
+    }
   }
 }

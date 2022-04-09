@@ -25,6 +25,12 @@
       padding-bottom: 2rem;
     }
 
+    .status {
+      color: blue;
+      margin: 0;
+      padding-right: 2rem;
+    }
+
     ul {
       background-color: #f2e9ad;
       border: 2px $color-primary-yellow solid;
@@ -35,12 +41,14 @@
       list-style: none;
 
       li {
+        width: 100%;
         height: 3rem;
         border: 1px $color-primary-yellow solid;
         background-color: #87cefa;
         border-radius: 1rem;
         padding: auto 0;
         display: flex;
+        justify-content: space-between;
         align-items: center;
         padding-left: 1rem;
         margin: 0.5rem 0;
@@ -54,6 +62,11 @@
         a:visited {
           color: black;
         }
+      }
+
+      .destination {
+        display: flex;
+        align-items: center;
       }
     }
   }

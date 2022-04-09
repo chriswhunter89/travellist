@@ -16,8 +16,11 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
     @destination = Destination.find(params[:destination_id])
     @task.destination = @destination
-    @task.save
-    redirect_to destination_path(@destination)
+    if @task.save
+      redirect_to destination_path(@destination)
+    else
+      render :new
+    end
   end
 
   def edit
