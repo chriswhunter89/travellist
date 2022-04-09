@@ -31,6 +31,9 @@
       <%= link_to "Add a new task", new_destination_task_path(@destination) %>
     </button>
     <button class="btn-navigate">
+      <%= link_to "Edit destination", edit_destination_path(@destination) %>
+    </button>
+    <button class="btn-navigate">
       <%= link_to "Return to dashboard", authenticated_root_path %>
     </button>
   </div>

@@ -3,13 +3,17 @@
     <div class="form-content">
       <h1>Create your new task</h1>
 
-      <%= simple_form_for [@post, Task.new] do |f| %>
-      <%= f.input :title %>
-      <%= f.input :notes %>
+      <%= simple_form_for [@destination, @task] do |f| %>
+      <%= f.input :title,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "Task title" }%>
+      <%= f.input :notes,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "Task notes" }%>
       <%= f.button :submit, class: "btn btn-primary" %>
       <% end %>
-
-      <%= link_to "Return to homepage", authenticated_root_path, class: "btn btn-primary blue-btn"%>
     </div>
   </div>
 </div>

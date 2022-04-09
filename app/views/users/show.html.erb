@@ -10,7 +10,15 @@
       <li>It looks like you have no destinations yet! Click on add destinations to begin your next adventure!</li>
     <% else %>
       <% @user.destinations.each do |destination| %>
-        <li><%= link_to destination.name, destination_path(destination) %></li>
+      <div class="destination">
+        <li><%= link_to destination.name, destination_path(destination) %>
+          <% if destination.visited == true %>
+            <p class="status">&#x2705;</p>
+          <% else %>
+            <p class="status">&#10060;</p>
+          <% end %>
+        </li>
+      </div>
       <% end %>
     <% end %>
     </ul>
