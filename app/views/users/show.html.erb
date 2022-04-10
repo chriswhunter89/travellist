@@ -5,7 +5,7 @@
   </div>
   <div class="user-show-page-left">
   <h3>Your destinations</h3>
-    <ul>
+    <ul style="overflow:scroll;">
     <% if @user.destinations.size == 0  %>
       <li>It looks like you have no destinations yet! Click on add destinations to begin your next adventure!</li>
     <% else %>
