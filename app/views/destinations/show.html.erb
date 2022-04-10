@@ -5,7 +5,7 @@
   </div>
   <div class="destination-show-page-left">
     <h2>Your tasks</h2>
-    <div class="tasks">
+    <div class="tasks" style="overflow:scroll;">
     <% if @destination.tasks.size == 0  %>
       <p>It looks like you have no tasks yet! Click on add task to plan your journey!</p>
     <% else %>
@@ -17,6 +17,9 @@
         </div>
         <div class="task-actions">
           <%= link_to edit_destination_task_path(@destination, task) do %><i class="fa-solid fa-square-pen"></i><% end %>
+          <%= link_to destination_task_path(@destination, task),
+            method: :delete,
+            data: { confirm: "Are you sure?" } do %><i class="fa-solid fa-square-minus"></i><% end %>
         </div>
       </div>
       <% end %>
@@ -37,6 +40,12 @@
     </button>
     <button class="btn-navigate">
       <%= link_to "Edit destination", edit_destination_path(@destination) %>
+    </button>
+    <button class="btn-navigate">
+      <%= link_to "Delete destination",
+            destination_path(@destination),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
     </button>
     <button class="btn-navigate">
       <%= link_to "Return to dashboard", authenticated_root_path %>

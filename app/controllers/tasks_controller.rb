@@ -33,6 +33,7 @@ class TasksController < ApplicationController
   end
 
   def destroy
+    @destination = Destination.find(params[:destination_id])
     @task = Task.find(params[:id])
     @task.destroy
     redirect_to destination_path(@destination)
