@@ -16,27 +16,26 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
     @destination = Destination.find(params[:destination_id])
     @task.destination = @destination
-    if @task.save
-      redirect_to destination_path(@destination)
-    else
-      render :new
-    end
+    @task.save
+    redirect_to destination_path(@destination)
   end
 
   def edit
+    @destination = Destination.find(params[:destination_id])
     @task = Task.find(params[:id])
   end
 
   def update
+    @destination = Destination.find(params[:destination_id])
     @task = Task.find(params[:id])
     @task.update(task_params)
-    redirect_to authenticated_root_path
+    redirect_to destination_path(@destination)
   end
 
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
-    redirect_to authenticated_root_path
+    redirect_to destination_path(@destination)
   end
 
   private

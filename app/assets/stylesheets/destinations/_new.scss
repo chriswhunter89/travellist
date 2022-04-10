@@ -11,6 +11,7 @@
   display: grid;
   grid-template-rows: 90vh auto min-content;
   grid-template-columns: [full-start] 30% [center-start] 1fr [center-end] 30% [full-end];
+  height: 92vh;
   align-items: center;
 
   .new-destination-form {

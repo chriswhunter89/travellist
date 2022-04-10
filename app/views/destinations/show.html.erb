@@ -11,8 +11,13 @@
     <% else %>
       <% @tasks.each do |task| %>
       <div class="task">
-        <h3><%=task.title%></h1>
-        <p><%=task.notes%></p>
+        <div class="task-info">
+          <h3><%=task.title%></h1>
+          <p><%=task.notes%></p>
+        </div>
+        <div class="task-actions">
+          <%= link_to edit_destination_task_path(@destination, task) do %><i class="fa-solid fa-square-pen"></i><% end %>
+        </div>
       </div>
       <% end %>
     <% end %>

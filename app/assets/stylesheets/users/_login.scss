@@ -2,6 +2,7 @@
   display: grid;
   grid-template-rows: 90vh auto min-content;
   grid-template-columns: [full-start] 10% [center-start]  1fr [center-end] 10% [full-end]; // 1140px / 8 columns = 140px
+  height: 92vh;
 
   .login-form {
     margin-top: 12rem;
