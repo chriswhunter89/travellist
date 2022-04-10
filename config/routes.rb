@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact'
 
   resources :destinations do
-    resources :tasks, only: [ :new, :create, :destroy ]
+    resources :tasks
     resources :memories, only: [ :new, :create, :destroy ]
   end
   resources :profile

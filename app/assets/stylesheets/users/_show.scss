@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: [full-start] 6rem [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] 6rem [full-end]; // 1140px / 8 columns = 140px
   width: 100vw;
+  height: 92vh;
   gap: 3rem;
   padding: 4rem 0;
 

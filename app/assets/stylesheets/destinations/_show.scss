@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: [full-start] 4rem [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] 4rem [full-end]; // 1140px / 8 columns = 140px
   width: 100vw;
+  height: 92vh;
   gap: 3rem;
   padding: 4rem 0;
 
@@ -48,7 +49,6 @@
 
     .task {
       display: flex;
-      flex-direction: column;
       align-items: flex-start;
       justify-content: center;
       border: 1px $color-primary-yellow solid;
@@ -60,6 +60,22 @@
 
       p {
         font-size: 1rem;
+      }
+
+      .task-info {
+        width: 80%;
+      }
+
+      .task-actions {
+        width: 15%;
+        display: flex;
+        flex-direction: column;
+
+        a {
+          color: white;
+          font-size: 2rem;
+          text-align: center;
+        }
       }
     }
   }

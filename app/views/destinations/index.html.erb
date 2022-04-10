@@ -12,7 +12,6 @@
       <li><%= link_to destination.name, destination_path(destination) %></li>
     <% end %>
   </ul>
-  <p><%= link_to "View your tasks", tasks_path, class: "btn btn-primary blue-btn"%></p>
   <p><%= link_to "Add a new destination", new_destination_path, class: "btn btn-primary blue-btn"%></p>
   <p><%= link_to "Return to dashboard", authenticated_root_path, class: "btn btn-primary blue-btn"%></p>
 </div>

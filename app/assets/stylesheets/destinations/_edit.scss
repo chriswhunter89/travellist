@@ -7,13 +7,14 @@
   box-shadow: none;
 }
 
-#new-destination-page {
+#edit-destination-page {
   display: grid;
   grid-template-rows: 90vh auto min-content;
   grid-template-columns: [full-start] 30% [center-start] 1fr [center-end] 30% [full-end];
+  height: 92vh;
   align-items: center;
 
-  .new-destination-form {
+  .edit-destination-form {
     height: 60vh;
     grid-column: center-start / center-end;
     background-color: $color-primary-yellow;

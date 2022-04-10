@@ -1,11 +1,20 @@
-#new-task-page {
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.mapboxgl-ctrl-geocoder {
+  max-width: none;
+  width: 100%;
+  border: 1px solid lightgrey;
+  box-shadow: none;
+}
+
+#edit-task-page {
   display: grid;
   grid-template-rows: 90vh auto min-content;
   grid-template-columns: [full-start] 30% [center-start] 1fr [center-end] 30% [full-end];
-  height: 92vh;
   align-items: center;
+  height: 92vh;
 
-  .new-task-form {
+  .edit-task-form {
     height: 60vh;
     grid-column: center-start / center-end;
     background-color: $color-primary-yellow;
@@ -33,10 +42,6 @@
         width: 70%;
         display: flex;
         flex-direction: column;
-      }
-
-      textarea {
-        height: 10rem;
       }
 
       h2 {
@@ -80,31 +85,37 @@
         }
       }
 
-      input[type=submit] {
-        margin: 3rem auto;
-        height: 40px;
-        width: 200px;
-        background-color: $color-primary-blue;
-        color: white;
-        border-radius: 8px;
-        border: none;
-
-        a {
-          text-decoration: none;
+        input[type=submit] {
+          margin: 3rem auto;
+          height: 40px;
+          width: 200px;
+          background-color: $color-primary-blue;
           color: white;
-          font-size: 1.6rem;
-        }
+          border-radius: 8px;
+          border: none;
 
-        &:hover {
-          transform: translateY(-3px);
-          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+          a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.6rem;
+          }
 
-          &::after {
-            transform: scaleX(1.4) scaleY(1.6);
-            opacity: 0;
+          &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+            &::after {
+              transform: scaleX(1.4) scaleY(1.6);
+              opacity: 0;
+            }
           }
         }
-      }
+
+        form input,
+        form textarea,
+        form select {
+          font-size: 1.5rem;
+        }
 
 
       .login-btn {
