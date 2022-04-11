@@ -15,6 +15,7 @@ class DestinationsController < ApplicationController
   def show
     @destination = Destination.find(params[:id])
     @tasks = @destination.tasks
+    @albums = @destination.albums
 
     @markers = [lat: @destination.latitude, lng: @destination.longitude]
   end

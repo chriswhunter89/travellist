@@ -17,14 +17,11 @@ Rails.application.routes.draw do
 
   resources :destinations do
     resources :tasks
-    resources :memories, only: [ :new, :create, :destroy ]
+    resources :albums do
+      member do
+        delete :delete_album_photos
+      end
+    end
   end
   resources :profile
 end
-
-#   resources :users do
-#     resources :destinations, only: [ :index ]
-#   end
-#   resources :destinations, only: [ :new, :create, :show, :edit, :destroy ]
-#   resources :memories
-#   resources :profiles, only: [ :show, :update ]

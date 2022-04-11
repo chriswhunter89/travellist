@@ -1,0 +1,15 @@
+<p><strong>Title:</strong><%= @album.title %></p>
+<p><strong>Description:</strong><%= @album.description %></p>
+<%= link_to 'Edit', edit_destination_album_path(@album) %> |
+
+<hr>
+
+<% @album.album_photos.order("created_at DESC").each do |album_photos| %>
+<div style="margin: 5px;border: 1px solid #ccc;float: left;width: 150px;">
+<%= link_to image_tag(album_photos.variant(resize_to_fill: [150, 150]), style: "width: 100%;height: auto;", alt: album_photos.filename.to_s), album_photos, target: "_blank"%>
+
+<div style="padding: 8px;text-align: center;font-size: 0.7em">
+<%= number_to_human_size(album_photos.byte_size.to_i) %>
+</div>
+</div>
+<% end %>

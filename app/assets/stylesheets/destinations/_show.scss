@@ -3,7 +3,6 @@
   grid-template-columns: [full-start] 4rem [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] 4rem [full-end]; // 1140px / 8 columns = 140px
   width: 100vw;
   gap: 3rem;
-  padding: 4rem 0;
 
   .destination-show-page-top {
     grid-column: center-start / center-end;
@@ -28,18 +27,20 @@
   }
 
   .destination-show-page-left {
-    grid-column: center-start / col-start 4;
+    grid-column: center-start / col-start 5;
+    height: 60vh;
     display: flex;
+    justify-content: space-around;
     padding: 3rem 0;
 
     .tasks-section {
+      width: 45%;
       display: flex;
       flex-direction: column;
       justify-items: center;
 
       .tasks {
         display: flex;
-        height: 100%;
         flex-direction: column;
         justify-content: space-between;
         background-color: #f2e9ad;
@@ -69,6 +70,57 @@
         }
 
         .task-actions {
+          width: 15%;
+          display: flex;
+          flex-direction: column;
+
+          a {
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .albums-section {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+
+      .albums {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #f2e9ad;
+        border: 2px $color-primary-yellow solid;
+        border-radius: 2rem;
+        padding: 2rem;
+        list-style: none;
+      }
+
+      .album {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        border: 1px $color-primary-yellow solid;
+        background-color: #87cefa;
+        border-radius: 1rem;
+        padding: 1rem;
+        margin: 0.5rem 0;
+        color: black;
+
+        p {
+          font-size: 1rem;
+        }
+
+        .album-info {
+          width: 80%;
+        }
+
+        .album-actions {
           width: 15%;
           display: flex;
           flex-direction: column;
