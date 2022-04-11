@@ -4,6 +4,7 @@ class Destination < ApplicationRecord
 
   belongs_to :user
   has_many :tasks, dependent: :destroy
+  has_many :albums, dependent: :destroy
 
   validates :name, presence: true
 end

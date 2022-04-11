@@ -1,0 +1,20 @@
+
+<div id="new-album-page">
+  <div class="new-album-form">
+    <div class="form-content">
+      <h1>Create your album</h1>
+
+      <%= simple_form_for [@destination, @album] do |f| %>
+      <%= f.input :title,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "Task title" }%>
+      <%= f.input :description,
+                  autofocus: true,
+                  input_html: { autocomplete: "Album description" }%>
+      <%= f.file_field :album_photos, multiple: true %>
+      <%= f.button :submit, class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

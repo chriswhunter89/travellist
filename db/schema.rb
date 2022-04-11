@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_10_204335) do
+ActiveRecord::Schema.define(version: 2022_04_11_135012) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,15 @@ ActiveRecord::Schema.define(version: 2022_04_10_204335) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "albums", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "destination_id"
+    t.string "title"
+    t.text "description"
+    t.index ["destination_id"], name: "index_albums_on_destination_id"
+  end
+
   create_table "destinations", force: :cascade do |t|
     t.string "name"
     t.string "address"
@@ -54,15 +63,6 @@ ActiveRecord::Schema.define(version: 2022_04_10_204335) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
     t.index ["user_id"], name: "index_destinations_on_user_id"
-  end
-
-  create_table "memories", force: :cascade do |t|
-    t.text "blog"
-    t.text "review"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.bigint "destination_id"
-    t.index ["destination_id"], name: "index_memories_on_destination_id"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -101,8 +101,8 @@ ActiveRecord::Schema.define(version: 2022_04_10_204335) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "albums", "destinations"
   add_foreign_key "destinations", "users"
-  add_foreign_key "memories", "destinations"
   add_foreign_key "profiles", "users"
   add_foreign_key "tasks", "destinations"
 end

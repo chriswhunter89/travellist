@@ -27,21 +27,22 @@
       <% end %>
       </div>
     </div>
-    <div class="memories-section">
-      <h2>Your memories</h2>
-      <div class="memories" style="overflow:scroll;overflow:auto;">
-      <% if @destination.memories.size == 0  %>
-        <p>It looks like you have no tasks yet! Click on add task to plan your journey!</p>
+    <div class="albums-section">
+      <h2>Your albums</h2>
+      <div class="albums" style="overflow:scroll;overflow:auto;">
+      <% if @destination.albums.size == 0  %>
+        <p>It looks like you have no albums yet! Click on add album to create!</p>
       <% else %>
-        <% @tasks.each do |task| %>
-        <div class="task">
-          <div class="task-info">
-            <h3><%=task.title%></h1>
-            <p><%=task.notes%></p>
+        <% @albums.each do |album| %>
+        <div class="album">
+          <div class="album-info">
+            <%= link_to album.title, destination_album_path(@destination, album) %>
+            <h3><%=album.title%></h1>
+            <p><%=album.description%></p>
           </div>
-          <div class="task-actions">
-            <%= link_to edit_destination_task_path(@destination, task) do %><i class="fa-solid fa-square-pen"></i><% end %>
-            <%= link_to destination_task_path(@destination, task),
+          <div class="album-actions">
+            <%= link_to edit_destination_album_path(@destination, album) do %><i class="fa-solid fa-square-pen"></i><% end %>
+            <%= link_to destination_path(@destination),
               method: :delete,
               data: { confirm: "Are you sure?" } do %><i class="fa-solid fa-square-minus"></i><% end %>
           </div>
@@ -65,6 +66,9 @@
     </button>
     <button class="btn-navigate">
       <%= link_to "Edit destination", edit_destination_path(@destination) %>
+    </button>
+    <button class="btn-navigate">
+      <%= link_to "Create Album", new_destination_album_path(@destination) %>
     </button>
     <button class="btn-navigate">
       <%= link_to "Delete destination",
