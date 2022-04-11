@@ -4,26 +4,51 @@
     <h3>View and manage your tasks for <%= @destination.name %> </h3>
   </div>
   <div class="destination-show-page-left">
-    <h2>Your tasks</h2>
-    <div class="tasks" style="overflow:scroll;">
-    <% if @destination.tasks.size == 0  %>
-      <p>It looks like you have no tasks yet! Click on add task to plan your journey!</p>
-    <% else %>
-      <% @tasks.each do |task| %>
-      <div class="task">
-        <div class="task-info">
-          <h3><%=task.title%></h1>
-          <p><%=task.notes%></p>
+    <div class="tasks-section">
+      <h2>Your tasks</h2>
+      <div class="tasks" style="overflow:scroll;overflow:auto;">
+      <% if @destination.tasks.size == 0  %>
+        <p>It looks like you have no tasks yet! Click on add task to plan your journey!</p>
+      <% else %>
+        <% @tasks.each do |task| %>
+        <div class="task">
+          <div class="task-info">
+            <h3><%=task.title%></h1>
+            <p><%=task.notes%></p>
+          </div>
+          <div class="task-actions">
+            <%= link_to edit_destination_task_path(@destination, task) do %><i class="fa-solid fa-square-pen"></i><% end %>
+            <%= link_to destination_task_path(@destination, task),
+              method: :delete,
+              data: { confirm: "Are you sure?" } do %><i class="fa-solid fa-square-minus"></i><% end %>
+          </div>
         </div>
-        <div class="task-actions">
-          <%= link_to edit_destination_task_path(@destination, task) do %><i class="fa-solid fa-square-pen"></i><% end %>
-          <%= link_to destination_task_path(@destination, task),
-            method: :delete,
-            data: { confirm: "Are you sure?" } do %><i class="fa-solid fa-square-minus"></i><% end %>
-        </div>
-      </div>
+        <% end %>
       <% end %>
-    <% end %>
+      </div>
+    </div>
+    <div class="memories-section">
+      <h2>Your memories</h2>
+      <div class="memories" style="overflow:scroll;overflow:auto;">
+      <% if @destination.memories.size == 0  %>
+        <p>It looks like you have no tasks yet! Click on add task to plan your journey!</p>
+      <% else %>
+        <% @tasks.each do |task| %>
+        <div class="task">
+          <div class="task-info">
+            <h3><%=task.title%></h1>
+            <p><%=task.notes%></p>
+          </div>
+          <div class="task-actions">
+            <%= link_to edit_destination_task_path(@destination, task) do %><i class="fa-solid fa-square-pen"></i><% end %>
+            <%= link_to destination_task_path(@destination, task),
+              method: :delete,
+              data: { confirm: "Are you sure?" } do %><i class="fa-solid fa-square-minus"></i><% end %>
+          </div>
+        </div>
+        <% end %>
+      <% end %>
+      </div>
     </div>
   </div>
   <div class="destination-show-page-right">
