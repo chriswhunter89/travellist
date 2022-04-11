@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: [full-start] 4rem [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] 4rem [full-end]; // 1140px / 8 columns = 140px
   width: 100vw;
-  height: 92vh;
   gap: 3rem;
   padding: 4rem 0;
 
@@ -30,51 +29,55 @@
 
   .destination-show-page-left {
     grid-column: center-start / col-start 4;
-    height: 60vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 3rem 0;
 
-    .tasks {
+    .tasks-section {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      background-color: #f2e9ad;
-      border: 2px $color-primary-yellow solid;
-      border-radius: 2rem;
-      padding: 2rem;
-      list-style: none;
-    }
+      justify-items: center;
 
-    .task {
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      border: 1px $color-primary-yellow solid;
-      background-color: #87cefa;
-      border-radius: 1rem;
-      padding: 1rem;
-      margin: 0.5rem 0;
-      color: black;
-
-      p {
-        font-size: 1rem;
-      }
-
-      .task-info {
-        width: 80%;
-      }
-
-      .task-actions {
-        width: 15%;
+      .tasks {
         display: flex;
+        height: 100%;
         flex-direction: column;
+        justify-content: space-between;
+        background-color: #f2e9ad;
+        border: 2px $color-primary-yellow solid;
+        border-radius: 2rem;
+        padding: 2rem;
+        list-style: none;
+      }
 
-        a {
-          color: white;
-          font-size: 2rem;
-          text-align: center;
+      .task {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        border: 1px $color-primary-yellow solid;
+        background-color: #87cefa;
+        border-radius: 1rem;
+        padding: 1rem;
+        margin: 0.5rem 0;
+        color: black;
+
+        p {
+          font-size: 1rem;
+        }
+
+        .task-info {
+          width: 80%;
+        }
+
+        .task-actions {
+          width: 15%;
+          display: flex;
+          flex-direction: column;
+
+          a {
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+          }
         }
       }
     }
@@ -96,9 +99,10 @@
 
   .destination-show-page-bottom {
     grid-column: center-start / center-end;
-    height: 15vh;
     display: flex;
     justify-content: center;
+    align-content: center;
+    margin-top: 5rem;
 
     button {
       margin: 0 2rem;

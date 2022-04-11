@@ -29,7 +29,7 @@ gem 'redis', '~> 4.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
-gem 'cloudinary', '~> 1.23.0'
+gem 'cloudinary', '~> 1.16.0'
 
 gem 'devise'
 
