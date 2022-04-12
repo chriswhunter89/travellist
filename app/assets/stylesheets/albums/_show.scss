@@ -1,0 +1,67 @@
+#album-show-page {
+  display: grid;
+  grid-template-columns: [full-start] 11% [center-start] 1fr [center-end] 11% [full-end];
+  width: 100%;
+  gap: 3rem;
+
+  .album-show-page-top {
+    grid-column: center-start / center-end;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5rem;
+    border: 2px solid;
+    border-radius: 1rem;
+    background-color: $color-primary-yellow;
+    color: $color-primary-blue;
+    margin-top: 5rem;
+
+    h1 {
+      margin-right: 10rem;
+      text-decoration: underline;
+    }
+  }
+
+  .album-show-page-main {
+    background-color: $color-primary-yellow;
+    grid-column: center-start / center-end;
+    height: 50vh;
+    border-radius: 2rem;
+
+
+    &__content {
+      width: 80%;
+      display: flex;
+
+      .photo-card {
+        width: 16rem;
+        height: 16rem;
+        border: 1px black solid;
+        border-radius: 2rem;
+        margin: 2rem;
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 2rem;
+        }
+
+        img:hover {
+          transform: scale(1.1);
+          box-shadow: #00000012 0px 1px 3px, #00000024 0px 1px 2px;
+          border: 1px black solid;
+        }
+      }
+    }
+  }
+
+  .album-show-page-bottom {
+    grid-column: center-start / center-end;
+    margin: 5rem auto;
+
+    button {
+      margin: 0 2rem;
+    }
+  }
+}

@@ -12,6 +12,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-bottom: 5rem;
+
+    h1 {
+      margin: 5rem;
+    }
+    h2 {
+      margin-bottom: 3rem;
+    }
   }
 
   .user-show-page-left {
@@ -20,7 +28,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem 0;
 
     h3 {
       padding-bottom: 2rem;
@@ -87,7 +94,6 @@
 
   .user-show-page-bottom {
     grid-column: col-start 3 / center-end;
-    height: 15vh;
     display: flex;
     justify-content: center;
   }

@@ -12,6 +12,22 @@
     border-radius: 12px;
     padding: 40px;
 
+    .heading {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      color: #1789FC;
+      text-decoration: underline;
+      font-family: 'Bebas Neue',
+      cursive;
+      font-size: 36px;
+      text-align: center;
+
+      :hover {
+        color: #1789FC;
+      }
+    }
+
     .about-content {
       padding: 3rem;
       display: flex;

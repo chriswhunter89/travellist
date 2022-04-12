@@ -12,6 +12,22 @@
     border-radius: 12px;
     padding: 40px;
 
+    .heading {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      color: #1789FC;
+      text-decoration: underline;
+      font-family: 'Bebas Neue',
+        cursive;
+      font-size: 36px;
+      text-align: center;
+
+      :hover {
+        color: #1789FC;
+      }
+    }
+
     .contact-content {
       padding: 3rem;
       display: flex;
@@ -30,10 +46,10 @@
           margin-bottom: 8rem;
         }
 
-        h2 {
+        h3 {
           color: $color-primary-blue;
           font-size: 2.2rem;
-          margin-bottom: 1rem;
+          margin: 2rem 0;
         }
 
         p {

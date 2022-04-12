@@ -1,8 +1,8 @@
 #login-page {
   display: grid;
-  grid-template-rows: 90vh auto min-content;
+  grid-template-rows: auto min-content;
   grid-template-columns: [full-start] 10% [center-start]  1fr [center-end] 10% [full-end]; // 1140px / 8 columns = 140px
-  height: 92vh;
+  height: 80vh;
 
   .login-form {
     margin-top: 12rem;
@@ -12,84 +12,100 @@
     border-radius: 12px;
     padding: 40px;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
 
-    &__left {
+    .heading {
       display: flex;
-      align-items: center;
-      width: 50%;
+      width: 100%;
       justify-content: center;
-      img {
-        height: 30rem;
-        width: auto;
-        box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+      color: #1789FC;
+      text-decoration: underline;
+      font-family: 'Bebas Neue', cursive;
+      font-size: 36px;
+      text-align: center;
+
+      :hover {
+        color: #1789FC;
       }
     }
 
-    &__right {
-      width: 30%;
-      justify-content: center;
-      position: relative;
-      bottom: 1.5rem;
+    .form-content {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
 
-      h1 {
-        position: relative;
-        right: 90%;
-        bottom: 10rem;
-        color: $color-primary-blue;
-        text-decoration: underline;
-        font-family: 'Bebas Neue', cursive;
-        font-size: 36px;
-        text-align: center;
-      }
-
-      h2 {
-        position: relative;
-        left: 40%;
-        color: $color-primary-blue;
-        font-size: 18px;
-        font-family: Inter, sans-serif;
-        font-weight: 300;
-        margin-bottom: 8px;
-      }
-
-      label {
-        font-weight: 300;
-        font-size: 14px;
-        margin-bottom: 8px;
-        color: $color-primary-blue;
-      }
-
-      input {
-        border-radius: 8px;
-        outline-width: 0px !important;
-        background-color: #f7f7f8;
-
-        &:focus {
-          border: 3px solid $color-primary-blue;
-          outline-width: 0px !important;
-          box-shadow: none;
-        }
-      }
-
-      .login-btn {
-        background-color: #f7f7f8;
-        color: #6C757D;
-        width: 100px;
-        margin: 8px auto;
-        height: 40px;
+      &__left {
         display: flex;
-        justify-content: center;
         align-items: center;
-        border-radius: 8px;
-        text-decoration: none;
-
-        &:hover {
-          background-color: blue;
-          color: white;
+        width: 50%;
+        justify-content: center;
+        img {
+          height: 30rem;
+          width: auto;
+          box-shadow: 0 0 20px rgba(0, 0, 0, .3);
         }
       }
+
+      &__right {
+        width: 30%;
+        justify-content: center;
+        margin-bottom: 8rem;
+
+        h2 {
+          text-align: center;
+          color: $color-primary-blue;
+          font-size: 18px;
+          font-family: Inter, sans-serif;
+          font-weight: 300;
+          margin-bottom: 8px;
+        }
+
+        label {
+          font-weight: 300;
+          font-size: 14px;
+          margin-bottom: 8px;
+          color: $color-primary-blue;
+        }
+
+        input {
+          border-radius: 8px;
+          outline-width: 0px !important;
+          background-color: #f7f7f8;
+          font-size: 1.5rem;
+
+          &:focus {
+            border: 3px solid $color-primary-blue;
+            outline-width: 0px !important;
+            box-shadow: none;
+          }
+        }
+
+        .btn {
+          margin: 2rem;
+          margin-left: 0;
+        }
+      }
+    }
+
+    a.forgot {
+      font-size: 1.2rem;
+      text-decoration: none;
+    }
+
+    a.signup {
+      text-decoration: none;
+      border: 1px grey solid;
+      border-radius: 0.5rem;
+      padding: .5rem;
+      color: grey;
+
+
     }
   }
+        p {
+          color: grey;
+          font-size: 1.2rem;
+        }
 }
