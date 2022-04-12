@@ -14,7 +14,7 @@
       <%= f.file_field :album_photos, multiple: true %>
       <%= f.button :submit, "Edit album", class: "edit-task-btn" %>
       <% end %>
-<p><%= link_to "Return to dashboard", authenticated_root_path, class: "btn btn-primary blue-btn"%></p>
+<p><%= link_to "Return to dashboard", destination_path(@destination), class: "btn btn-primary blue-btn"%></p>
     </div>
   </div>
 </div>
