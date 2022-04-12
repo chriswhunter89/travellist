@@ -1,18 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
-.mapboxgl-ctrl-geocoder {
-  max-width: none;
-  width: 100%;
-  border: 1px solid lightgrey;
-  box-shadow: none;
-}
-
 #edit-album-page {
   display: grid;
   grid-template-rows: 90vh auto min-content;
   grid-template-columns: [full-start] 30% [center-start] 1fr [center-end] 30% [full-end];
-  align-items: center;
   height: 92vh;
+  align-items: center;
 
   .edit-album-form {
     height: 60vh;
@@ -42,6 +33,11 @@
         width: 70%;
         display: flex;
         flex-direction: column;
+      }
+
+      textarea {
+        height: 10rem;
+        font-size: 1.4rem;
       }
 
       h2 {
@@ -85,37 +81,31 @@
         }
       }
 
-        input[type=submit] {
-          margin: 3rem auto;
-          height: 40px;
-          width: 200px;
-          background-color: $color-primary-blue;
+      input[type=submit] {
+        margin: 3rem auto;
+        height: 40px;
+        width: 200px;
+        background-color: $color-primary-blue;
+        color: white;
+        border-radius: 8px;
+        border: none;
+
+        a {
+          text-decoration: none;
           color: white;
-          border-radius: 8px;
-          border: none;
-
-          a {
-            text-decoration: none;
-            color: white;
-            font-size: 1.6rem;
-          }
-
-          &:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-
-            &::after {
-              transform: scaleX(1.4) scaleY(1.6);
-              opacity: 0;
-            }
-          }
+          font-size: 1.6rem;
         }
 
-        form input,
-        form textarea,
-        form select {
-          font-size: 1.5rem;
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+          &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+          }
         }
+      }
 
 
       .login-btn {

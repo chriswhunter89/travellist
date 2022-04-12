@@ -1,10 +1,7 @@
 class AlbumsController < ApplicationController
-  def index
-    @destination = Destination.find(params[:destination_id])
-    @albums = Album.all
-  end
 
   def show
+    @destination = Destination.find(params[:destination_id])
     @album = Album.find(params[:id])
   end
 
@@ -40,13 +37,11 @@ class AlbumsController < ApplicationController
     redirect_to destination_path(@destination)
   end
 
-  def delete_album_photos
-    attachment = ActiveStorage::Attachment.find(params[:id])
-    attachment.purge
-    redirect_back(fallback_location: destination_album_path)
-  end
-
   private
+
+  def set_album
+    @album = Album.find(params[:id])
+  end
 
   def album_params
     params.require(:album).permit(:title, :description, album_photos: [])
