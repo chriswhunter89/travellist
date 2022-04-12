@@ -1,9 +1,20 @@
-<h1>Edit your new album</h1>
-
-<%= form_for(@album) do |f| %>
-  <%= f.label :blog %>
-  <%= f.text_field :blog %>
-  <%= f.label :review %>
-  <%= f.text_field :review %>
-  <%= f.submit %>
-<% end %>
+<div id="edit-album-page">
+  <div class="edit-album-form">
+    <div class="form-content">
+      <h1>Edit your album</h1>
+      <%= simple_form_for([@destination, @album]) do |f| %>
+      <%= f.input :title,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "Album title" } %>
+      <%= f.input :description,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "Album description" } %>
+      <%= f.file_field :album_photos, multiple: true %>
+      <%= f.button :submit, "Edit album", class: "edit-task-btn" %>
+      <% end %>
+<p><%= link_to "Return to dashboard", authenticated_root_path, class: "btn btn-primary blue-btn"%></p>
+    </div>
+  </div>
+</div>

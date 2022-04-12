@@ -3,5 +3,4 @@ class Album < ApplicationRecord
   has_many_attached :album_photos
 
   validates :title, presence: true
-  validates :description, presence: true
 end

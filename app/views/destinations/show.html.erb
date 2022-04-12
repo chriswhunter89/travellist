@@ -13,8 +13,8 @@
         <% @tasks.each do |task| %>
         <div class="task">
           <div class="task-info">
-            <h3><%=task.title%></h1>
-            <p><%=task.notes%></p>
+            <h4><strong><%=task.title%></strong></h4>
+            <p><em><%=task.notes%></em></p>
           </div>
           <div class="task-actions">
             <%= link_to edit_destination_task_path(@destination, task) do %><i class="fa-solid fa-square-pen"></i><% end %>
@@ -31,13 +31,12 @@
       <h2>Your albums</h2>
       <div class="albums" style="overflow:scroll;overflow:auto;">
       <% if @destination.albums.size == 0  %>
-        <p>It looks like you have no albums yet! Click on add album to create!</p>
+        <p>It looks like you have no albums yet! Click on create album!</p>
       <% else %>
         <% @albums.each do |album| %>
         <div class="album">
           <div class="album-info">
             <%= link_to album.title, destination_album_path(@destination, album) %>
-            <h3><%=album.title%></h1>
             <p><%=album.description%></p>
           </div>
           <div class="album-actions">

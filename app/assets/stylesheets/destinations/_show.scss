@@ -15,6 +15,7 @@
     border-radius: 1rem;
     background-color: $color-primary-yellow;
     color: $color-primary-blue;
+    margin-top: 5rem;
 
     h1 {
       margin-right: 10rem;
@@ -23,7 +24,7 @@
   }
 
   h2 {
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
   }
 
   .destination-show-page-left {
@@ -48,12 +49,17 @@
         border-radius: 2rem;
         padding: 2rem;
         list-style: none;
+
+        p {
+          color: black;
+          font-size: 1.3rem;
+        }
       }
 
       .task {
         display: flex;
-        align-items: flex-start;
-        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
         border: 1px $color-primary-yellow solid;
         background-color: #87cefa;
         border-radius: 1rem;
@@ -61,20 +67,20 @@
         margin: 0.5rem 0;
         color: black;
 
-        p {
-          font-size: 1rem;
-        }
 
         .task-info {
-          width: 80%;
+          text-align: left;
         }
 
         .task-actions {
           width: 15%;
           display: flex;
           flex-direction: column;
+          margin-left: 1rem;
+
 
           a {
+            position: relative;
             color: white;
             font-size: 2rem;
             text-align: center;
@@ -91,7 +97,6 @@
 
       .albums {
         display: flex;
-        height: 100%;
         flex-direction: column;
         justify-content: space-between;
         background-color: #f2e9ad;
@@ -99,6 +104,11 @@
         border-radius: 2rem;
         padding: 2rem;
         list-style: none;
+
+        p {
+          color: black;
+          font-size: 1.3rem;
+        }
       }
 
       .album {
@@ -112,8 +122,15 @@
         margin: 0.5rem 0;
         color: black;
 
-        p {
-          font-size: 1rem;
+        a:link {
+          text-decoration: none;
+          color: black;
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+
+        a:visited {
+          color: black;
         }
 
         .album-info {
@@ -123,6 +140,7 @@
         .album-actions {
           width: 15%;
           display: flex;
+          margin-left: 1rem;
           flex-direction: column;
 
           a {
@@ -154,7 +172,6 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    margin-top: 5rem;
 
     button {
       margin: 0 2rem;

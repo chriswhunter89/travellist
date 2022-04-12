@@ -1,7 +1,7 @@
 <div id="user-show-page">
   <div class="user-show-page-top">
     <h1>Welcome to your dashboard, <%= current_user.first_name %>!</h1>
-    <h3>Manage your destinations, tasks and memories all from one location!</h3>
+    <h2><em>Manage your destinations, tasks and memories all from one location!</em></h2>
   </div>
   <div class="user-show-page-left">
   <h3>Your destinations</h3>
@@ -11,7 +11,7 @@
     <% else %>
       <% @user.destinations.each do |destination| %>
       <div class="destination">
-        <li><%= link_to destination.name, destination_path(destination) %>
+        <li><%= link_to destination.name, destination_path(destination), class: "a-primary"%>
           <% if destination.visited == true %>
             <p class="status">&#x2705;</p>
           <% else %>
