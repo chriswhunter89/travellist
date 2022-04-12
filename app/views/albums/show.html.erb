@@ -1,15 +1,21 @@
-<p><strong>Title:</strong><%= @album.title %></p>
-<p><strong>Description:</strong><%= @album.description %></p>
-<%= link_to 'Edit', edit_destination_album_path(@album) %> |
-
-<hr>
-
-<% @album.album_photos.order("created_at DESC").each do |album_photos| %>
-<div style="margin: 5px;border: 1px solid #ccc;float: left;width: 150px;">
-<%= link_to image_tag(album_photos.variant(resize_to_fill: [150, 150]), style: "width: 100%;height: auto;", alt: album_photos.filename.to_s), album_photos, target: "_blank"%>
-
-<div style="padding: 8px;text-align: center;font-size: 0.7em">
-<%= number_to_human_size(album_photos.byte_size.to_i) %>
+<div id="album-show-page">
+  <div class="album-show-page-top">
+    <h1><em><%= @album.title %></em></h1>
+    <h3><%= @album.description %> </h3>
+  </div>
+  <div class="album-show-page-main">
+    <div class="album-show-page-main__content" style="overflow:scroll;overflow:auto;">
+      <% @album.album_photos.order("created_at DESC").each do |album_photos| %>
+      <div class="photo-card">
+        <%= link_to image_tag(album_photos.variant(resize_to_fill: [160, 160]), alt: album_photos.filename.to_s), album_photos, target: "_blank"%>
+        <%= link_to 'Delete', delete_album_photos_destination_album_path(album_photos), method: :delete, data: { confirm: 'Are you sure?' } %><i class="fa-solid fa-square-minus"></i>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="album-show-page-bottom">
+    <button class="btn-navigate">
+      <%= link_to 'Return to destination', destination_path(@destination) %>
+    </button>
+  </div>
 </div>
-</div>
-<% end %>
