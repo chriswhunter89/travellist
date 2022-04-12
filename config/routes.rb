@@ -17,11 +17,7 @@ Rails.application.routes.draw do
 
   resources :destinations do
     resources :tasks
-    resources :albums do
-      member do
-        delete :delete_album_photos
-      end
-    end
+    resources :albums
   end
   resources :profile
 end
