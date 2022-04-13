@@ -112,9 +112,14 @@
         }
 
         form input,
-        form textarea,
+
         form select {
           font-size: 1.5rem;
+        }
+
+        form textarea {
+          font-size: 1.5rem;
+          height: 16rem;
         }
 
 
