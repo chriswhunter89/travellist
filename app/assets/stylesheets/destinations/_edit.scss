@@ -38,10 +38,12 @@
       }
 
       form {
-        height: 70%;
+        height: 80%;
         width: 70%;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        padding-top: 5rem;
       }
 
       h2 {

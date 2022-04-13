@@ -2,7 +2,6 @@
 
 #home-page {
   display: grid;
-  width: 100vw;
   grid-template-rows: auto min-content;
   grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] minmax(2rem, 1fr) [full-end]; // 1140px / 8 columns = 140px
   overflow: hidden;
@@ -168,4 +167,5 @@
       width: auto;
     }
   }
+
 }
