@@ -11,7 +11,7 @@
   grid-column: full-start / full-end;
   grid-template-columns: minmax(min-content, max-content);
   grid-template-rows: minmax(min-content, max-content);
-  height: 90vh;
+  height: 95vh;
   background-color: $color-primary-yellow;
   color: $color-primary-blue;
   margin: 1rem !important;
@@ -28,9 +28,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 40%;
-    margin-top: 12rem;
-    margin-bottom: 18rem;
-    margin-right: 4.5rem;
+    margin-right: 3rem;
 
     .title-block {
       height: 16rem;
