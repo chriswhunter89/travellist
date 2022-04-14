@@ -1,11 +1,9 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 #sign-up-page {
     display: grid;
-    grid-template-rows: 90vh auto min-content;
+    grid-template-rows: min-content;
     grid-template-columns: [full-start] 10% [center-start]  1fr [center-end] 10% [full-end]; // 1140px / 8 columns = 140px
-    height: 92vh;
     margin-top: 4rem;
 
   .sign-up-form {
@@ -36,7 +34,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100%;
 
       .form-left {
         width: 50%;
