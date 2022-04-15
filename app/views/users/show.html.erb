@@ -7,7 +7,7 @@
   <h3>Your destinations</h3>
     <ul style="overflow:scroll;overflow:auto;">
     <% if @user.destinations.size == 0  %>
-      <li>It looks like you have no destinations yet! Click on add destinations to begin your next adventure!</li>
+      <p>It looks like you have no destinations yet! Click on add destinations to begin your next adventure!</p>
     <% else %>
       <% @user.destinations.each do |destination| %>
       <div class="destination">
