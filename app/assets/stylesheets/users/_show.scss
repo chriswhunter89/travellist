@@ -49,6 +49,13 @@
       height: 100%;
       list-style: none;
 
+      .wrapper {
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        overflow-y: auto;
+      }
+
       li {
         width: 100%;
         height: 3rem;
@@ -87,9 +94,12 @@
     margin: 0 auto;
     border: 5px $color-primary-yellow solid;
     border-radius: 3rem;
+    z-index: 100;
     .map {
-      border-radius: 2.4rem;
-      overflow: auto;
+      overflow: hidden;
+      z-index: -1;
+    border-radius: 2rem;
+    -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
     }
   }
 
