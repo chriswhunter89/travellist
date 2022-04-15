@@ -28,18 +28,20 @@
     grid-column: center-start / center-end;
     height: 50vh;
     border-radius: 2rem;
+    overflow: auto;
+
+    .wrapper {
+      overflow-x: hidden;
+      overflow-y: scroll;
+      overflow-y: auto;
+    }
 
 
     &__content {
-      width: 80%;
-      display: flex;
 
       .photo-card {
-        width: 16rem;
-        height: 16rem;
-        border: 1px black solid;
-        border-radius: 2rem;
         margin: 2rem;
+        float: left;
 
         img {
           width: 100%;
@@ -50,7 +52,6 @@
         img:hover {
           transform: scale(1.1);
           box-shadow: #00000012 0px 1px 3px, #00000024 0px 1px 2px;
-          border: 1px black solid;
         }
       }
     }

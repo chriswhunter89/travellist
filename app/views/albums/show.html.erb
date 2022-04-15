@@ -4,12 +4,14 @@
     <h3><%= @album.description %> </h3>
   </div>
   <div class="album-show-page-main">
+  <div class="wrapper">
     <div class="album-show-page-main__content" style="overflow:scroll;overflow:auto;">
       <% @album.album_photos.order("created_at DESC").each do |album_photos| %>
       <div class="photo-card">
-        <%= link_to image_tag(album_photos.variant(resize_to_fill: [160, 160]), alt: album_photos.filename.to_s), album_photos, target: "_blank"%>
+        <%= link_to image_tag(album_photos.variant(resize_to_fill: [190, 190]), alt: album_photos.filename.to_s), album_photos, target: "_blank"%>
       </div>
       <% end %>
+    </div>
     </div>
   </div>
   <div class="album-show-page-bottom">
