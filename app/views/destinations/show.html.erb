@@ -7,47 +7,51 @@
     <div class="tasks-section">
       <h2>Your tasks</h2>
       <div class="tasks" style="overflow:scroll;overflow:auto;">
-      <% if @destination.tasks.size == 0  %>
-        <p>It looks like you have no tasks yet! Click on add task to plan your journey!</p>
-      <% else %>
-        <% @tasks.each do |task| %>
-        <div class="task">
-          <div class="task-info">
-            <h4><strong><%=task.title%></strong></h4>
-            <p><em><%=task.notes%></em></p>
+        <div class="wrapper">
+        <% if @destination.tasks.size == 0  %>
+          <p>It looks like you have no tasks yet! Click on add task to plan your journey!</p>
+        <% else %>
+          <% @tasks.each do |task| %>
+          <div class="task">
+            <div class="task-info">
+              <h4><strong><%=task.title%></strong></h4>
+              <p><em><%=task.notes%></em></p>
+            </div>
+            <div class="task-actions">
+              <%= link_to edit_destination_task_path(@destination, task) do %><i class="fa-solid fa-square-pen"></i><% end %>
+              <%= link_to destination_task_path(@destination, task),
+                method: :delete,
+                data: { confirm: "Are you sure?" } do %><i class="fa-solid fa-square-minus"></i><% end %>
+            </div>
           </div>
-          <div class="task-actions">
-            <%= link_to edit_destination_task_path(@destination, task) do %><i class="fa-solid fa-square-pen"></i><% end %>
-            <%= link_to destination_task_path(@destination, task),
-              method: :delete,
-              data: { confirm: "Are you sure?" } do %><i class="fa-solid fa-square-minus"></i><% end %>
-          </div>
-        </div>
+          <% end %>
         <% end %>
-      <% end %>
+        </div>
       </div>
     </div>
     <div class="albums-section">
       <h2>Your albums</h2>
       <div class="albums" style="overflow:scroll;overflow:auto;">
-      <% if @destination.albums.size == 0  %>
-        <p>It looks like you have no albums yet! Click on create album to store your happy memories!</p>
-      <% else %>
-        <% @albums.each do |album| %>
-        <div class="album">
-          <div class="album-info">
-            <%= link_to album.title, destination_album_path(@destination, album) %>
-            <p><%=album.description%></p>
+        <div class="wrapper">
+        <% if @destination.albums.size == 0  %>
+          <p>It looks like you have no albums yet! Click on create album to store your happy memories!</p>
+        <% else %>
+          <% @albums.each do |album| %>
+          <div class="album">
+            <div class="album-info">
+              <%= link_to album.title, destination_album_path(@destination, album) %>
+              <p><%=album.description%></p>
+            </div>
+            <div class="album-actions">
+              <%= link_to edit_destination_album_path(@destination, album) do %><i class="fa-solid fa-square-pen"></i><% end %>
+              <%= link_to destination_album_path(@destination, album),
+                method: :delete,
+                data: { confirm: "Are you sure?" }  do %><i class="fa-solid fa-square-minus"></i><% end %>
+            </div>
           </div>
-          <div class="album-actions">
-            <%= link_to edit_destination_album_path(@destination, album) do %><i class="fa-solid fa-square-pen"></i><% end %>
-            <%= link_to destination_album_path(@destination, album),
-              method: :delete,
-              data: { confirm: "Are you sure?" }  do %><i class="fa-solid fa-square-minus"></i><% end %>
-          </div>
-        </div>
+          <% end %>
         <% end %>
-      <% end %>
+        </div>
       </div>
     </div>
   </div>

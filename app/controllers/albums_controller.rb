@@ -34,7 +34,7 @@ class AlbumsController < ApplicationController
     @destination = Destination.find(params[:destination_id])
     @album = Album.find(params[:id])
     @album.destroy
-    redirect_to authenticated_root_path
+    redirect_to destination_path(@destination)
   end
 
   private

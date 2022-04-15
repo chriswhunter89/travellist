@@ -51,10 +51,17 @@
         list-style: none;
         min-height: 10rem;
 
-        p {
-          color: black;
-          font-size: 1.3rem;
+        .wrapper {
+          height: 100%;
+            overflow-x: hidden;
+            overflow-y: scroll;
+            overflow-y: auto;
         }
+
+          p {
+            color: black;
+            font-size: 1.3rem;
+          }
       }
 
       .task {
@@ -106,6 +113,13 @@
         padding: 2rem;
         list-style: none;
         min-height: 10rem;
+
+        .wrapper {
+          height: 100%;
+          overflow-x: hidden;
+          overflow-y: scroll;
+          overflow-y: auto;
+        }
 
         p {
           color: black;
