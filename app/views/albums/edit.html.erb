@@ -12,7 +12,7 @@
                   autofocus: true,
                   input_html: { autocomplete: "Album description" } %>
       <%= f.file_field :album_photos, multiple: true %>
-      <%= f.button :submit, "Edit album", class: "edit-task-btn" %>
+      <%= f.button :submit, "Save album", class: "edit-task-btn" %>
       <% end %>
 <p><%= link_to "Return to destination", destination_path(@destination), class: "btn btn-primary blue-btn"%></p>
     </div>
