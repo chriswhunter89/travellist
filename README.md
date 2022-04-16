@@ -4,7 +4,7 @@ Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/ra
 
 ## About The Project
 
-[![product-screenshot]](app/assets/images/travellist1.png?raw=true "Project screenshot1")
+![](app/assets/images/travellist1.png)
 [![product-screenshot]](app/assets/images/travellist2.png?raw=true "Project screenshot2")
 Welcome to my repo for travellist website. This website is for avid travellers who want a platform with simple UI & navigation to allow them to easily track destinations they have been to, want to go to, create lists of tasks and places they want to see at their chosen destinations and store their photos in dedicated albums.  This repositiory contains all the code files & resources for the travellist build.
 
