@@ -6,7 +6,6 @@
 
   .destination-show-page-top {
     grid-column: center-start / center-end;
-    height: 10vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -15,11 +14,13 @@
     border-radius: 1rem;
     background-color: $color-primary-yellow;
     color: $color-primary-blue;
-    margin-top: 5rem;
+    margin-top: 2rem;
+    flex-grow: 1;
 
     h1 {
       margin-right: 10rem;
       text-decoration: underline;
+      font-size: 4rem;
     }
   }
 
@@ -176,7 +177,7 @@
     width: 80%;
     border: 5px $color-primary-yellow solid;
     border-radius: 3rem;
-    margin-top: 5rem;
+    margin-top: 2rem;
 
     .map {
       border-radius: 2.4rem;
