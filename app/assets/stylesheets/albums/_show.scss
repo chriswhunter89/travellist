@@ -6,7 +6,6 @@
 
   .album-show-page-top {
     grid-column: center-start / center-end;
-    height: 10vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -16,10 +15,12 @@
     background-color: $color-primary-yellow;
     color: $color-primary-blue;
     margin-top: 5rem;
+    flex-grow: 1;
 
     h1 {
       margin-right: 10rem;
       text-decoration: underline;
+      font-size: 4rem;
     }
   }
 
@@ -59,7 +60,7 @@
 
   .album-show-page-bottom {
     grid-column: center-start / center-end;
-    margin: 5rem auto;
+    margin: 0 auto;
 
     button {
       margin: 0 2rem;
