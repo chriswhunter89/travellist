@@ -3,7 +3,7 @@
 .mapboxgl-ctrl-geocoder {
   max-width: none;
   width: 100%;
-  border: 1px solid lightgrey;
+  border: 1px solid rgb(151, 122, 122);
   box-shadow: none;
 }
 
@@ -15,7 +15,7 @@
   align-items: center;
 
   .edit-destination-form {
-    height: 60vh;
+    max-height: 90vh;
     grid-column: center-start / center-end;
     background-color: $color-primary-yellow;
     box-shadow: #00000012 0px 1px 3px, #00000024 0px 1px 2px;
@@ -23,46 +23,29 @@
     padding: 5rem !important;
 
     .form-content {
-      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
 
       h1 {
-        bottom: 5rem;
         color: $color-primary-blue;
         text-decoration: underline;
         font-family: 'Bebas Neue', cursive;
-        font-size: 36px;
+        font-size: 3.6rem;
+        text-align: center;
       }
 
       form {
-        height: 80%;
-        width: 70%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding-top: 5rem;
-      }
-
-      h2 {
-        position: relative;
-        left: 40%;
-        color: $color-primary-blue;
-        font-size: 24px;
-        font-family: Inter, sans-serif;
-        font-weight: 300;
-        margin-bottom: 8px;
+        align-content: space-between;
       }
 
       label {
-        display: flex;
-        font-weight: 300;
         font-size: 14px;
-        margin-bottom: 8px;
         color: $color-primary-blue;
-        align-items: center;
       }
 
       .labelText {
@@ -73,8 +56,6 @@
       }
 
       input:not([type=checkbox]) {
-        width: 100%;
-        height: 3rem;
         border-radius: 2px;
         outline-width: 0px !important;
         background-color: #f7f7f8;
@@ -130,6 +111,11 @@
           background-color: blue;
           color: white;
         }
+      }
+      .return {
+        width: 50%;
+        align-self: center;
+        margin: 2rem;
       }
     }
   }
