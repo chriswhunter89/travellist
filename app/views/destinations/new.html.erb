@@ -15,8 +15,8 @@
         <%= f.check_box :visited, as: :boolean, checked_value: true, unchecked_value: false %> <span class="labelText">I have been to this destination before</span>
       <% end %>
         <%= f.button :submit, "Create destination", class: "create-destination-btn" %>
+      <%= link_to "Return to dashboard", authenticated_root_path, class: "return btn btn-primary blue-btn"%>
       <% end %>
-      <%= link_to "Return to dashboard", authenticated_root_path, class: "btn btn-primary blue-btn"%>
     </div>
   </div>
 </div>
