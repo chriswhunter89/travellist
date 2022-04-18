@@ -6,34 +6,34 @@
   align-items: center;
 
   .new-task-form {
-    height: 60vh;
+    max-height: 90vh;
     grid-column: center-start / center-end;
     background-color: $color-primary-yellow;
     box-shadow: #00000012 0px 1px 3px, #00000024 0px 1px 2px;
     border-radius: 12px;
-    padding: 5rem !important;
+    padding: 3rem !important;
 
     .form-content {
-      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
 
       h1 {
-        bottom: 5rem;
         color: $color-primary-blue;
         text-decoration: underline;
         font-family: 'Bebas Neue', cursive;
-        font-size: 36px;
+        font-size: 3.6rem;
+        text-align: center;
+        margin: 2rem;
       }
 
       form {
-        height: 80%;
         width: 70%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-content: space-between;
       }
 
       textarea {
@@ -41,23 +41,9 @@
         font-size: 1.4rem;
       }
 
-      h2 {
-        position: relative;
-        left: 40%;
-        color: $color-primary-blue;
-        font-size: 24px;
-        font-family: Inter, sans-serif;
-        font-weight: 300;
-        margin-bottom: 8px;
-      }
-
       label {
-        display: flex;
-        font-weight: 300;
-        font-size: 14px;
-        margin-bottom: 8px;
+        font-size: 1.4rem;
         color: $color-primary-blue;
-        align-items: center;
       }
 
       .labelText {
@@ -67,9 +53,8 @@
         margin-left: 1rem;
       }
 
-      input:not([type=checkbox]) {
+      input {
         width: 100%;
-        height: 3rem;
         border-radius: 2px;
         outline-width: 0px !important;
         background-color: #f7f7f8;
@@ -83,9 +68,9 @@
       }
 
       input[type=submit] {
-        margin: 3rem auto;
-        height: 40px;
-        width: 200px;
+        margin: 2rem auto;
+        height: 4rem;
+        width: 20rem;
         background-color: $color-primary-blue;
         color: white;
         border-radius: 8px;
@@ -108,23 +93,10 @@
         }
       }
 
-
-      .login-btn {
-        background-color: #f7f7f8;
-        color: #6C757D;
-        width: 100px;
-        margin: 8px auto;
-        height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 8px;
-        text-decoration: none;
-
-        &:hover {
-          background-color: blue;
-          color: white;
-        }
+      .return {
+        width: 50%;
+        align-self: center;
+        margin: 2rem;
       }
     }
   }

@@ -12,8 +12,8 @@
                   autofocus: true,
                   input_html: { autocomplete: "Task notes" } %>
         <%= f.button :submit, "Save task", class: "edit-task-btn" %>
+      <%= link_to "Return to destination", destination_path(@destination), class: "return btn btn-primary blue-btn"%>
       <% end %>
-      <%= link_to "Return to destination", destination_path(@destination), class: "btn btn-primary blue-btn"%>
     </div>
   </div>
 </div>
